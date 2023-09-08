@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, Image, FlatList, TouchableOpacity } from 'react-native';
-
+import moment from 'moment';
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
@@ -45,7 +45,7 @@ const Dates = (props) => {
     return (
         <View>
             <View style={{ paddingTop: 30, alignItems: 'center', }}>
-                <Text style={styles.DateText}>July 24, 2023</Text>
+                <Text style={styles.DateText}>{moment(props?.selected ? props.selected :new Date()).format('MMMM DD, YYYY')}</Text>
             </View>
 
             <View style={{ paddingTop: 20 }}>
