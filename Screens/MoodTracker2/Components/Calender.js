@@ -20,17 +20,12 @@ const Calenders = (props) => {
                         <Image source={require('../assets/Icon.jpg')} />
                     );
                 }}
-                initialDate={'2023-07-01'}
-                minDate={'2023-07-01'}
-                disableArrowLeft={true}
-                disableArrowRight={true}
-                maxDate={'2023-07-31'}
+              
                 theme={{
 
                     backgroundColor: '#ffffff',
                     calendarBackground: '#ffffff',
                     textSectionTitleColor: '#b6c1cd',
-
                     textSectionTitleDisabledColor: '#d9e1e8',
                     selectedDayBackgroundColor: '#00adf5',
                     selectedDayTextColor: '#ffffff',
@@ -83,32 +78,9 @@ const Calenders = (props) => {
                 firstDay={1}
 
                 markedDates={{
-                    ['2023-07-01']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-02']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-03']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-04']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-05']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-06']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-07']: { selected: true, selectedColor: '#FEEDBF' },
-                    ['2023-07-08']: { selected: true, selectedColor: '#FEEDBF' },
-                    ['2023-07-09']: { selected: true, selectedColor: '#FFD5D1' },
-                    ['2023-07-10']: { selected: true, selectedColor: '#FEEDBF' },
-                    ['2023-07-11']: { selected: true, selectedColor: '#FEEDBF' },
-                    ['2023-07-12']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-13']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-14']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-15']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-16']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-17']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-18']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-19']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-20']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-21']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-22']: { selected: true, selectedColor: '#F2F4F7' },
-                    ['2023-07-23']: { selected: true, selectedColor: '#FEEDBF' },
-                    ['2023-07-24']: { dotColor: '#151F6D', selected: true, marked: true, selectedColor: '#F2F4F7' },
-
+                    [props?.selected]:{selected: true, marked: true,selectedDotColor:'#151F6D',selectedColor:'#F2F4F7'}
                 }}
+            
 
             />
         </View>

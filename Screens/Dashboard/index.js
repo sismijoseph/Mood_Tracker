@@ -5,20 +5,22 @@ import Card1 from './Components/Card1';
 import Card4 from './Components/Card4';
 import Card3 from './Components/Card3';
 import Card2 from './Components/Card2';
-
-const Dashboard = () => {
+import BottomTabs from './Components/bottomtabs';
+const Dashboard = ({navigation}) => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+ 
       <View style={styles.Container}>
-
+   <ScrollView showsVerticalScrollIndicator={false}>
         <Profile />
         <Card1 />
-        <Card2 />
+        <Card2 navigation={navigation}/>
         <Card3 />
         <Card4 />
+        </ScrollView>
+        <BottomTabs navigation={navigation}/>
 
       </View>
-    </ScrollView>
+   
   )
 };
 

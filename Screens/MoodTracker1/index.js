@@ -3,10 +3,12 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import Dates from './Components/Date';
 import Activity from './Components/Activity';
 import Profile from '../../Components/Profile';
+import BottomTabs from '../../Components/bottomTab';
 
 const MoodTracker1 = ({ navigation, route }) => {
 
     return (
+        <>
         <ScrollView style={{ backgroundColor: '#FFFFFF' }}>
             <View style={styles.Container}>
                 <Profile />
@@ -14,6 +16,8 @@ const MoodTracker1 = ({ navigation, route }) => {
                 <Activity navigation={navigation} />
             </View>
         </ScrollView>
+        <BottomTabs navigation={navigation}/>
+        </>
     )
 };
 

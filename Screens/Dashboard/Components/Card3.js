@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     CardView: {
         backgroundColor: '#F9FAFB',
-        width: Width * 0.90,
+        width: Width * 0.88,
         borderRadius: 6,
         paddingTop: Width * 0.04,
         paddingLeft: Width * 0.04,

@@ -4,25 +4,26 @@ import {
     Text,
     View,
     Dimensions,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 import { FONTS } from '../../../Constants/Constants';
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
 
-const Card2 = () => {
+const Card2 = ({navigation}) => {
 
     return (
         <View>
-            <View style={styles.CardView}>
+            <TouchableOpacity style={styles.CardView} onPress={()=>navigation.navigate('MoodTracker2')}>
 
-                <View style={styles.CardView2}>
+                <View style={styles.CardView2} >
                     <Text style={[styles.DateText, { left: -37 }]}>Betty’s Goals</Text>
                     <Text style={styles.SubText}>5/7 Goals Met</Text>
                 </View>
 
-            </View>
+            </TouchableOpacity>
 
             <View style={styles.BoxView}>
                 <View style={{ flexDirection: 'row', margin: 15 }}>
@@ -106,7 +107,9 @@ const styles = StyleSheet.create({
         width: Width * 0.88,
         elevation: 5,
         borderRadius: 8,
-        marginTop: 15
+        marginTop: 15,
+        marginLeft:2,
+        
 
     },
     TextCall: {

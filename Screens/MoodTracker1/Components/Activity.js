@@ -94,7 +94,7 @@ const data = [
 const Activity = ({ navigation }) => {
     const [selectedItems, setSelectedItems] = useState([]);
     const [isModalVisible, setIsModalVisible] = useState(false)
-    const [Notes, setNotes] = useState('Lorem ipsum is placeholder text.')
+    const [Notes, setNotes] = useState('')
 
     const toggleItemSelection = (item) => {
         if (selectedItems.includes(item.item.id)) {

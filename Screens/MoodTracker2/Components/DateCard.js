@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
 import { FONTS } from '../../../Constants/Constants';
-
+import moment from 'moment';
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
 
 const DateCard = (props) => {
 
-
+{console.log("props notes",props.notes1)}
     return (
         <View>
             <View style={{ paddingTop: 20, alignItems: 'center', }}>
@@ -16,16 +16,16 @@ const DateCard = (props) => {
             </View>
 
             <View style={styles.CardView1}>
-                <Text style={styles.DtText}>July 24, 2023</Text>
+                <Text style={styles.DtText}>{moment(props?.selected ? props.selected :new Date()).format('MMMM DD, YYYY')}</Text>
 
-                {!props.notes ?
+                { !props?.notes?
                     <TouchableOpacity style={styles.btnView}
                         onPress={() => props?.navigation.navigate('MoodTracker1', { Date1: props?.selected })}>
 
                         <Text style={styles.btnText}>How is Betty feeling today?</Text>
                     </TouchableOpacity> :
                     <View style={{ margin: 15 }}>
-                        <Text style={styles.BoxContent}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</Text>
+                        <Text style={styles.BoxContent}>{props?.notes}</Text>
                     </View>}
 
             </View>

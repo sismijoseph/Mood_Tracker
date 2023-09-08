@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Modal, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Modal, TouchableOpacity, StyleSheet, Dimensions, TextInput } from 'react-native';
 import { FONTS } from '../../../Constants/Constants';
 
 const Width = Dimensions.get('window').width;
@@ -25,8 +25,12 @@ const NoteModal = (props) => {
                     <Text style={styles.HeadText}>Add Note for Today’s Mood</Text>
 
                     <View style={styles.CardView}>
+                        <TextInput
+                            value={props?.Notes}
+                            style={styles.BoxContent}
+                            multiline
+                            onChangeText={(text) => props?.setNotes(text)} />
 
-                        <Text style={styles.BoxContent}>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</Text>
                     </View>
 
                     <TouchableOpacity style={styles.TouchBtn} onPress={() => ModalClose()}>
@@ -63,7 +67,7 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         color: '#101828',
         fontFamily: FONTS.FontMedium,
-        top:2
+        top: 2
     },
     CardView: {
         borderRadius: 8,
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
         padding: 10,
         marginTop: 10,
         width: Width * 0.80,
-        height:Width*0.4
+        height: Width * 0.4
     },
     BoxContent: {
         fontSize: 14,
@@ -86,10 +90,10 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: Width*0.06,
+        marginTop: Width * 0.06,
         height: Width * 0.12,
         backgroundColor: '#151F6D',
-        marginBottom:Width*0.02
+        marginBottom: Width * 0.02
 
     },
     btnText: {

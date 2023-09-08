@@ -20,7 +20,7 @@ const Card4 = () => {
                 <Text style={styles.TextDesc}>these with a loved one soon.<Text style={[styles.TextDesc, { color: '#931E42' }]}>Read more...</Text></Text>
 
                 <View style={{ marginTop: Width * 0.04 }}>
-                    <Image source={require('../assets/image1.jpg')} style={{ width: Width * 0.82 }} />
+                    <Image source={require('../assets/image1.jpg')} style={{ width: Width * 0.80 }} />
                 </View>
 
                 <View style={{ paddingTop: Width * 0.05, paddingBottom: Width * 0.05 }}>
@@ -45,12 +45,13 @@ const styles = StyleSheet.create({
     },
     CardView: {
         backgroundColor: '#F9FAFB',
-        width: Width * 0.90,
+        width: Width * 0.88,
         borderRadius: 6,
         paddingTop: Width * 0.04,
         paddingLeft: Width * 0.04,
         justifyContent: 'center',
-        marginTop: Width * 0.04
+        marginTop: Width * 0.04,
+        marginBottom:10
     },
     TextDesc: {
         color: '#101828',
