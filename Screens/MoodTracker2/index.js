@@ -7,7 +7,7 @@ import Calendars from './Components/Calender';
 import BottomTabs from '../../Components/bottomTab';
 
 const MoodTracker2 = ({ route, navigation }) => {
-    const [selected, setSelected] = useState('');
+    const [selected, setSelected] = useState();
     const [notes1, setNotes1] = useState(false)
 
     return (
